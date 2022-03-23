@@ -1,13 +1,15 @@
 # Blog Pessoal
 
-Projeto de blog pessoal feito durante as aulas do bootcamp de desenvolvimento web full stack da Generation Brasil.
+Repositório do front-end do projeto de Blog Pessoal feito durante as aulas do bootcamp de desenvolvimento web full stack da Generation Brasil.
 
 ## Stack
 
 [No back-end](https://github.com/petry078/BlogPessoal):
 * Java;
+* MySQL & PostegresSQL;
 * Spring Boot;
-* NodeJS.
+* NodeJS;
+* Deploy com Heroku.
 
 No front-end:
 * HTML, CSS & JavaScript;
