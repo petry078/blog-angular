@@ -4,7 +4,7 @@ Projeto de blog pessoal feito durante as aulas do bootcamp de desenvolvimento we
 
 ## Stack
 
-(No back-end)[https://github.com/petry078/BlogPessoal]:
+!(No back-end)[https://github.com/petry078/BlogPessoal]:
 * Java;
 * Spring Boot;
 * NodeJS.
