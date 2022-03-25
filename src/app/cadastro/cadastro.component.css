@@ -1,6 +1,9 @@
 #img-bg{
     background-image: url("https://s1.gifyu.com/images/ezgif.com-gif-maker15.gif");
-    min-height: 695px;
+
+    min-height: 100vh;
+
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   
