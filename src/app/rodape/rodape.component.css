@@ -1,0 +1,15 @@
+.social-network {
+    list-style: none;
+    display: inline
+}
+
+.fa {
+    font-size: 35pt;
+    color: white;
+    padding: 10px;
+
+}
+
+.fa:hover {
+    color: black;
+}
