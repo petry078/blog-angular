@@ -28,4 +28,12 @@ export class TemaEditComponent implements OnInit {
     this.temaService.getByIdTema(id).subscribe((resp: temas) => {this.tema = resp})
   }
 
+  atualizar(){
+    this.temaService.putTema(this.tema).subscribe((resp: temas)=>{
+      this.tema = resp
+      alert("Tema atualizado com sucesso!")
+      this.router.navigate(["/temas"])
+    })
+  }
+
 }
