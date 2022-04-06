@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { temas } from 'src/app/model/Temas';
 import { TemasService } from 'src/app/service/temas.service';
 import { environment } from 'src/environments/environment.prod';
@@ -9,12 +9,13 @@ import { environment } from 'src/environments/environment.prod';
   templateUrl: './tema-delete.component.html',
   styleUrls: ['./tema-delete.component.css']
 })
+
 export class TemaDeleteComponent implements OnInit {
 
   tema: temas = new temas()
   idTema: number
   
-  constructor(private temaService: TemasService, private router: Router, private route: Router){}
+  constructor(private temaService: TemasService, private router: Router, private route: ActivatedRoute){}
 
   ngOnInit(){
     if(environment.token == ""){
