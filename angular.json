@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "blogPessoal": {
+    "BlogPessoal": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -73,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "blogPessoal:build:production"
+              "browserTarget": "BlogPessoal:build:production"
             },
             "development": {
-              "browserTarget": "blogPessoal:build:development"
+              "browserTarget": "BlogPessoal:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "blogPessoal:build"
+            "browserTarget": "BlogPessoal:build"
           }
         },
         "test": {
@@ -107,5 +107,5 @@
       }
     }
   },
-  "defaultProject": "blogPessoal"
+  "defaultProject": "BlogPessoal"
 }

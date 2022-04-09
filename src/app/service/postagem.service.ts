@@ -1,7 +1,7 @@
+import { Observable } from 'rxjs';
+import { environment } from './../../environments/environment.prod';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
 
 @Injectable({
@@ -9,15 +9,30 @@ import { Postagem } from '../model/Postagem';
 })
 export class PostagemService {
 
-  constructor(private http: HttpClient){}
-  token = {headers: new HttpHeaders().set("Authorization", environment.token)}
+  constructor(private http: HttpClient) { }
 
-  getAllPostagens(): Observable<Postagem[]>{
-    return this.http.get<Postagem[]>("https://blogpessoalpetry.herokuapp.com/postagens", this.token)
+  token = {
+    headers: new HttpHeaders().set('Authorization', environment.token)
   }
 
-  postPostagem(postagem: Postagem): Observable<Postagem>{
-    return this.http.post<Postagem>("https://blogpessoalpetry.com/postagens", postagem, this.token)
+  getAllPostagens(): Observable<Postagem[]>{
+    return this.http.get<Postagem[]>('https://blogpessoalpetry.herokuapp.com/postagens', this.token)
+  }
+
+  getByIdPostagem(id: number): Observable<Postagem>{
+    return this.http.get<Postagem>(`https://blogpessoalpetry.herokuapp.com/postagens/${id}`, this.token)
+  }
+
+  postPostagem(postagem: Postagem) : Observable<Postagem>{
+    return this.http.post<Postagem>('https://blogpessoalpetry.herokuapp.com/postagens', postagem, this.token)
+  }
+
+  putPostagem(postagem: Postagem): Observable<Postagem>{
+    return this.http.put<Postagem>('https://blogpessoalpetry.herokuapp.com/postagens', postagem, this.token)
+  }
+
+  deletePostagem(id: number){
+    return this.http.delete(`https://blogpessoalpetry.herokuapp.com/postagens/${id}`, this.token)
   }
 
 }
